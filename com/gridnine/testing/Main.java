@@ -10,7 +10,7 @@ public class Main {
         final LocalDateTime myNow = LocalDateTime.now();        //TODO  .plusDays(3).plusHours(7);
         flyList.parallelStream()
                 .filter(fl -> {
-                    LocalDateTime local = null
+                    LocalDateTime local = null;
                     for (Segment sg : fl.getSegments()) {
                         if (sg.getArrivalDate().isAfter(myNow)) {
                             return false;
